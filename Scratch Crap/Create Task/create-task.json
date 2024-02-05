@@ -1,0 +1,16 @@
+{
+    "autoScheduled": {
+        "deadlineType": "SOFT",
+        "schedule": "Work Hours",
+        "startDate": "2024-01-25"
+    },
+    "description": "# Description Heading\nSample Text\n## Sample Heading2\nMore Sample Text",
+    "dueDate": "2024-02-06T14:25:00-05:00",
+    "duration": "NONE",
+    "labels": [
+        "Imported Assignment"
+    ],
+    "name": "API Created Task for the Class Template",
+    "status": "Todo",
+    "workspaceId": "Qn39qhPwj7mxfwT-zT-Po"
+}

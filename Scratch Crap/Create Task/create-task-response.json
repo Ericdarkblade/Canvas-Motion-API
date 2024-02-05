@@ -1,0 +1,75 @@
+{
+    "assignees": [
+        {
+            "email": "ewalkerpriority@gmail.com",
+            "id": "qJ9XMZnwvegCwwZCNaQcLiN2Mf02",
+            "name": "Eric Walker"
+        }
+    ],
+    "createdTime": "2024-02-05T02:59:16.280Z",
+    "creator": {
+        "email": "ewalkerpriority@gmail.com",
+        "id": "qJ9XMZnwvegCwwZCNaQcLiN2Mf02",
+        "name": "Eric Walker"
+    },
+    "deadlineType": "SOFT",
+    "description": "<h1 id=\"description-heading\">Description Heading</h1>\n<p>Sample Text</p>\n<h2 id=\"sample-heading2\">Sample Heading2</h2>\n<p>More Sample Text</p>",
+    "dueDate": "2024-02-06T19:25:00.000Z",
+    "duration": "NONE",
+    "id": "PJ_bRRELmyG8IcQ0CyQCG",
+    "labels": [
+        {
+            "name": "Imported Assignment"
+        }
+    ],
+    "name": "API Created Task for the Class Template",
+    "parentRecurringTaskId": null,
+    "priority": "MEDIUM",
+    "project": null,
+    "scheduledEnd": null,
+    "scheduledStart": null,
+    "schedulingIssue": false,
+    "status": {
+        "isDefaultStatus": true,
+        "isResolvedStatus": false,
+        "name": "Todo"
+    },
+    "workspace": {
+        "id": "Qn39qhPwj7mxfwT-zT-Po",
+        "labels": [
+            {
+                "name": "Imported Assignment"
+            }
+        ],
+        "name": "Class Template",
+        "statuses": [
+            {
+                "isDefaultStatus": false,
+                "isResolvedStatus": false,
+                "name": "Backlog"
+            },
+            {
+                "isDefaultStatus": false,
+                "isResolvedStatus": false,
+                "name": "Blocked"
+            },
+            {
+                "isDefaultStatus": false,
+                "isResolvedStatus": true,
+                "name": "Completed"
+            },
+            {
+                "isDefaultStatus": false,
+                "isResolvedStatus": false,
+                "name": "In Progress"
+            },
+            {
+                "isDefaultStatus": true,
+                "isResolvedStatus": false,
+                "name": "Todo"
+            }
+        ],
+        "teamId": null,
+        "type": "INDIVIDUAL"
+    }
+}

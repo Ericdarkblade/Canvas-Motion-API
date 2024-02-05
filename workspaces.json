@@ -1,0 +1,36 @@
+{"workspaces": [
+        {"id": "Qn39qhPwj7mxfwT-zT-Po", "name": "Class Template", "teamId": "None", "statuses": [
+                {"name": "Backlog", "isDefaultStatus": "False", "isResolvedStatus": "False"
+                },
+                {"name": "Blocked", "isDefaultStatus": "False", "isResolvedStatus": "False"
+                },
+                {"name": "Completed", "isDefaultStatus": "False", "isResolvedStatus": "True"
+                },
+                {"name": "Imported Assignment", "isDefaultStatus": "False", "isResolvedStatus": "False"
+                },
+                {"name": "In Progress", "isDefaultStatus": "False", "isResolvedStatus": "False"
+                },
+                {"name": "Todo", "isDefaultStatus": "True", "isResolvedStatus": "False"
+                }
+            ], "labels": [], "type": "INDIVIDUAL"
+        },
+        {"id": "RI7ELR8k9dty3cjN143Hx", "name": "My Tasks (Private)", "teamId": "None", "statuses": [
+                {"name": "Backlog", "isDefaultStatus": "False", "isResolvedStatus": "False"
+                },
+                {"name": "Blocked", "isDefaultStatus": "False", "isResolvedStatus": "False"
+                },
+                {"name": "Completed", "isDefaultStatus": "False", "isResolvedStatus": "True"
+                },
+                {"name": "In Progress", "isDefaultStatus": "False", "isResolvedStatus": "False"
+                },
+                {"name": "Todo", "isDefaultStatus": "True", "isResolvedStatus": "False"
+                },
+                {"name": "Unmanaged", "isDefaultStatus": "False", "isResolvedStatus": "False"
+                }
+            ], "labels": [
+                {"name": "Class (Math)"
+                }
+            ], "type": "INDIVIDUAL"
+        }
+    ]
+}

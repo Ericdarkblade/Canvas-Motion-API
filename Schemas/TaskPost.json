@@ -1,0 +1,108 @@
+{
+    "type": "object",
+    "properties": {
+        "dueDate": {
+            "type": "string",
+            "description": "ISO 8601 Due date on the task. REQUIRED for scheduled tasks",
+            "example": "2024-01-25T09:29:28.166-07:00",
+            "format": "date-time"
+        },
+        "duration": {
+            "default": 30,
+            "description": "A duration can be one of the following... \"NONE\", \"REMINDER\", or a integer greater than 0",
+            "oneOf": [
+                {
+                    "enum": [
+                        "NONE",
+                        "REMINDER"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "minimum": 1,
+                    "type": "number"
+                }
+            ]
+        },
+        "status": {
+            "type": "string",
+            "description": "Defaults to workspace default status."
+        },
+        "autoScheduled": {
+            "nullable": true,
+            "description": "Set values to turn auto scheduling on, set value to null if you want to turn auto scheduling off. The status for the task must have auto scheduling enabled.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/AutoScheduledInfo"
+                }
+            ]
+        },
+        "name": {
+            "type": "string",
+            "description": "Name / title of the task",
+            "minLength": 1
+        },
+        "projectId": {
+            "type": "string"
+        },
+        "workspaceId": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string",
+            "description": "Input as GitHub Flavored Markdown"
+        },
+        "priority": {
+            "type": "string",
+            "default": "MEDIUM",
+            "enum": [
+                "ASAP",
+                "HIGH",
+                "MEDIUM",
+                "LOW"
+            ]
+        },
+        "labels": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "assigneeId": {
+            "type": "string",
+            "description": "The user id the task should be assigned to"
+        }
+    },
+    "required": [
+        "name",
+        "workspaceId"
+    ],
+    "definitions": {
+        "AutoScheduledInfo": {
+            "type": "object",
+            "properties": {
+                "startDate": {
+                    "type": "string",
+                    "default": "2024-01-25T07:00:00.000Z",
+                    "description": "ISO 8601 Date which is trimmed to the start of the day passed",
+                    "example": "2024-01-25",
+                    "format": "date-time"
+                },
+                "deadlineType": {
+                    "type": "string",
+                    "default": "SOFT",
+                    "enum": [
+                        "HARD",
+                        "SOFT",
+                        "NONE"
+                    ]
+                },
+                "schedule": {
+                    "type": "string",
+                    "description": "Schedule the task must adhere to. Schedule MUST be 'Work Hours' if scheduling the task for another user.",
+                    "default": "Work Hours"
+                }
+            }
+        }
+    }
+}

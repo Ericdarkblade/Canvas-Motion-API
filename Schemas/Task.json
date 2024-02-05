@@ -1,0 +1,234 @@
+{
+    "type": "object",
+    "properties": {
+        "duration": {
+            "default": 30,
+            "description": "A duration can be one of the following... \"NONE\", \"REMINDER\", or a integer greater than 0",
+            "oneOf": [
+                {
+                    "enum": [
+                        "NONE",
+                        "REMINDER"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "minimum": 1,
+                    "type": "number"
+                }
+            ]
+        },
+        "workspace": {
+            "$ref": "#/definitions/Workspace"
+        },
+        "id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "dueDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "deadlineType": {
+            "type": "string",
+            "default": "SOFT",
+            "enum": [
+                "HARD",
+                "SOFT",
+                "NONE"
+            ]
+        },
+        "parentRecurringTaskId": {
+            "type": "string"
+        },
+        "completed": {
+            "type": "boolean"
+        },
+        "creator": {
+            "description": "The user that created this task",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/User"
+                }
+            ]
+        },
+        "project": {
+            "$ref": "#/definitions/Project"
+        },
+        "status": {
+            "$ref": "#/definitions/Status"
+        },
+        "priority": {
+            "type": "string",
+            "enum": [
+                "ASAP",
+                "HIGH",
+                "MEDIUM",
+                "LOW"
+            ]
+        },
+        "labels": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Label"
+            }
+        },
+        "assignees": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/User"
+            }
+        },
+        "scheduledStart": {
+            "format": "date-time",
+            "type": "string",
+            "description": "The time that motion has scheduled this task to start"
+        },
+        "createdTime": {
+            "format": "date-time",
+            "type": "string",
+            "description": "The time that the task was created"
+        },
+        "scheduledEnd": {
+            "format": "date-time",
+            "type": "string",
+            "description": "The time that motion has scheduled this task to end"
+        },
+        "schedulingIssue": {
+            "type": "boolean",
+            "description": "Returns true if Motion was unable to schedule this task. Check Motion directly to address"
+        }
+    },
+    "required": [
+        "workspace",
+        "id",
+        "name",
+        "dueDate",
+        "deadlineType",
+        "parentRecurringTaskId",
+        "completed",
+        "creator",
+        "status",
+        "priority",
+        "labels",
+        "assignees",
+        "createdTime",
+        "schedulingIssue"
+    ],
+    "definitions": {
+        "Workspace": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "teamId": {
+                    "type": "string"
+                },
+                "statuses": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Status"
+                    }
+                },
+                "labels": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Label"
+                    }
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "statuses",
+                "labels",
+                "type"
+            ]
+        },
+        "Status": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "isDefaultStatus": {
+                    "type": "boolean"
+                },
+                "isResolvedStatus": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "name",
+                "isDefaultStatus",
+                "isResolvedStatus"
+            ]
+        },
+        "Label": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        "User": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ]
+        },
+        "Project": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "workspaceId": {
+                    "type": "string"
+                },
+                "status": {
+                    "$ref": "#/definitions/Status"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "status"
+            ]
+        }
+    }
+}
