@@ -1,2 +1,0 @@
-[Packages]
-dependencies = ['re', 'ics', 'requests', 'config', 'arrow', 'datetime']
