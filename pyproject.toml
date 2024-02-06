@@ -6,5 +6,5 @@ description = "A script that syncs a Canvas ICS URL with a Motion API Backend"
 dependencies = ['ics', 'requests', 'config', 'arrow', 'datetime']
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]
