@@ -3,3 +3,5 @@ __pycache__/
 
 # API Key
 Motion_Canvas_API_Sync/Config/globals.py
+
+.vscode/
