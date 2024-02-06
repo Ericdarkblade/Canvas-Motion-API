@@ -6,6 +6,7 @@ import arrow
 import datetime
 from Config.globals import canvas_ics_url
 
+
 class ParseException(Exception):
     pass
 
@@ -18,12 +19,14 @@ class Canvas_Event:
         end: arrow.Arrow,
         duration: datetime.timedelta,
         description: str,
+        uid: str,
     ) -> None:
         self.name = name
         self.begin = begin
         self.end = end
         self.duration = duration
         self.description = description
+        self.uid = uid
 
         self.class_code = parse_class(self.name)
         self.assignment_title = parse_assignment(self.name)
@@ -36,6 +39,7 @@ class Canvas_Event:
             end=event.end,
             duration=event.duration,
             description=event.description,
+            uid=event.uid,
         )
         return self
 
