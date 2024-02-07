@@ -3,7 +3,7 @@ name = "Motion_Canvas_API_Sync"
 version = "0.1.0"
 description = "A script that syncs a Canvas ICS URL with a Motion API Backend"
 
-dependencies = ['ics', 'requests', 'config', 'arrow', 'datetime', 'json']
+dependencies = ['ics', 'requests', 'config', 'arrow', 'datetime']
 
 [build-system]
 build-backend = "flit_core.buildapi"
