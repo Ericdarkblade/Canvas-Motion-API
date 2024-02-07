@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/eric/Linux Home/Scripts/Python/Canvas-Motion-API/venv"
+set -gx VIRTUAL_ENV "/home/eric/Linux Home/Scripts/Python/Canvas_Motion_API/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/eric/Linux Home/Scripts/Python/Canvas-Motion-API/venv/bin/python3" "$0" "$@"
+'''exec' "/home/eric/Linux Home/Scripts/Python/Canvas_Motion_API/venv/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

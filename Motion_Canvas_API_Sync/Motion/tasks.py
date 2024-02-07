@@ -10,7 +10,7 @@ def create_task(
     dueDate: str,
     name: str,
     workspaceId: str,
-    description: str= None,
+    description: str = None,
     labels: [str] = None,
     *,
     autoScheduled: bool = True,
@@ -19,7 +19,7 @@ def create_task(
     deadlineType: str = "HARD",
     schedule: str = "Work Hours",
     status: str = None,
-    api_key: str = secret_api_key
+    api_key: str = secret_api_key,
 ):
     url = "https://api.usemotion.com/v1/tasks"
     headers = {"Accept": "application/json", "X-API-Key": api_key}
@@ -43,4 +43,4 @@ def create_task(
 
     print(payload)
 
-    #motion_response = requests.get(url, headers=headers).json()
+    # motion_response = requests.get(url, headers=headers).json()

@@ -6,3 +6,5 @@ Motion_Canvas_API_Sync/Config/globals.py
 
 *secrets*.py
 .vscode/
+
+venv/
