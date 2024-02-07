@@ -158,14 +158,7 @@ def parse_assignment(name: str) -> str:
 
 # Regex Test
 
-# if __name__ == "__main__":
-#    strings = [
-#        "Failure Case",
-#        "Garbage Information is right there [SP24-BL-INFO-I301-8506]",
-#    ]
-#
-#    for string in strings:
-#        try:
-#            print(parse_class(string))
-#        except ParseException:
-#            print(f"Error Caught for String, '{string}'")
+if __name__ == "__main__":
+    calendar = parse_canvas_calendar()
+
+    print(len(calendar))
