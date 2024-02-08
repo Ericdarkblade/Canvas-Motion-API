@@ -1,20 +1,14 @@
-from enum import Enum
 import requests
 from Motion_Canvas_API_Sync.Motion import workspaces
 import Motion_Canvas_API_Sync.Motion.secrets as secrets
 from datetime import datetime
+from priority import Priority
+from settings import server
 
 
 secret_api_key = secrets.api_key
 
 # payload["labels"] = ["Imported Assignment"]
-
-
-class Priority(str, Enum):
-    ASAP = "ASAP"
-    HIGH = "HIGH"
-    MEDIUM = "MEDIUM"
-    LOW = "LOW"
 
 
 def create_task(
@@ -53,7 +47,7 @@ def create_task(
         priority (Priority, optional): Priority ENUM from Tasks class. Defaults to Priority.MEDIUM.
         api_key (str, optional): API Key for usemotion.com. Defaults to secret_api_key.
     """
-    url = "https://api.usemotion.com/v1/tasks"
+    url = f"{server}/tasks"
     headers = {
         "Content-Type": "application/json",
         "Accept": "application/json",

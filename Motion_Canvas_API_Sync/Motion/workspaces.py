@@ -1,5 +1,6 @@
 import requests
 import Motion_Canvas_API_Sync.Motion.secrets as secrets
+from settings import server
 
 api_key = secrets.api_key
 secret_workspace_name = secrets.workspace_name
@@ -13,8 +14,19 @@ class Workspace:
         name: str = secret_workspace_name,
         api_key: str = api_key,
     ):
+        """Makes a workspace object from either a known workspace id or a workspace name, with an api key.
+        Prioritizes Workspace ID if both are present.
+
+        Args:
+            id (str, optional):  Defaults to None.
+            name (str, optional): Defaults to secret_workspace_name.
+            api_key (str, optional): Defaults to api_key.
+
+        Raises:
+            Exception: Thrown if no workspace is found with either ID or Name
+        """
         self.api_key = api_key
-        self.url = "https://api.usemotion.com/v1/workspaces"
+        self.url = f"{server}/workspaces"
         self.headers = {"Accept": "application/json", "X-API-Key": api_key}
 
         if id:
